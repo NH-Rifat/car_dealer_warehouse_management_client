@@ -65,12 +65,17 @@
   display: flex;
   font-size: 25px;
 }
+.location_info{
+  display: flex;
+  /* justify-content: space-around; */
+}
 .location_info span{
-
+  color: rgb(255, 84, 0);
 }
 .location_info p{
   color: rgb(68, 65, 65);
   font-weight: 400;
+  margin-left: 10px;
 }
 .border{
   border-bottom: 1px solid gray;
@@ -94,4 +99,181 @@
 }
 .stock p{
   color: rgb(80, 77, 77);
+}
+
+@media only screen and (max-width: 1440px){
+  .manage_Inventory{
+    width: 70%;
+    margin: 0 auto;
+    margin-left: 5px;
+  }
+  .total_card h2{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .inventory_card{
+    width: 80%;
+    /* flex-direction: column; */
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-left: 30%;
+  }
+
+  .location_info p{
+    font-size: 16px;
+    margin-left: 2px;
+  }
+  .price p{
+    color: rgb(32, 29, 29);
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .inventory_name h3{
+    display: flex;
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .manage_Inventory{
+    width: 90%;
+    margin: 0 auto;
+    margin-left: 5px;
+  }
+  .total_card h2{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .inventory_card{
+    width: 80%;
+    /* flex-direction: column; */
+    margin: 0 auto;
+    margin-bottom: 20px;
+    /* margin-left: 50%; */
+  }
+
+  .location_info p{
+    font-size: 16px;
+    margin-left: 2px;
+  }
+  .price p{
+    color: rgb(32, 29, 29);
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .inventory_name h3{
+    display: flex;
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 768px){
+  .manage_Inventory{
+    width: 70%;
+    margin: 0 auto;
+    margin-left: 5px;
+  }
+  .total_card h2{
+    font-size: 25px;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+
+  .inventory_card{
+    width: 80%;
+    flex-direction: column;
+    margin: 0 auto;
+    /* padding: 10px; */
+    margin-bottom: 20px;
+    margin-left: 30%;
+
+  }
+
+  .location_info p{
+    font-size: 17px;
+    margin-left: 2px;
+  }
+  .price p{
+    color: rgb(32, 29, 29);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .inventory_name h3{
+    display: flex;
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .manage_Inventory{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .total_card h2{
+    font-size: 22px;
+    display: flex;
+  }
+
+  .inventory_card{
+    width: 95%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 2%;
+  }
+  .item_img{
+    overflow: hidden;
+  }
+
+  .price p{
+    color: rgb(32, 29, 29);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .inventory_name h3{
+    display: flex;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .manage_Inventory{
+    width: 98%;
+    margin: 0 auto;
+    margin-left: 5px;
+  }
+  .total_card h2{
+    font-size: 22px;
+    display: flex;
+  }
+
+  .inventory_card{
+    width: 98%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    /* padding: 10px; */
+  }
+  .item_img{
+    overflow: hidden;
+    width: 100%;
+  }
+  .location_info p{
+    font-size: 14px;
+    margin-left: 2px;
+  }
+  .price p{
+    color: rgb(32, 29, 29);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .inventory_name h3{
+    display: flex;
+    font-size: 18px;
+  }
 }

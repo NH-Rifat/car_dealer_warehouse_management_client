@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './ManageInventory.module.css';
+import { GoLocation } from "react-icons/go";
 import car_image1 from '../../images/s_released_cars_thumb01.jpg';
 import car_image2 from '../../images/s_released_cars_thumb02.jpg';
 import car_image3 from '../../images/s_released_cars_thumb03.jpg';
-import car_image4 from '../../images/s_released_cars_thumb04.jpg';
-import car_image5 from '../../images/s_released_cars_thumb05.jpg';
-import car_image6 from '../../images/s_released_cars_thumb06.jpg';
 
 
 const ManageInventory = () => {
@@ -40,7 +38,7 @@ const ManageInventory = () => {
               <h3>BMW 8- Series 2-Door</h3>
             </div>
             <div className={styles.location_info}>
-              <span className={styles.location_icon}></span>
+              <span className={styles.location_icon}><GoLocation></GoLocation></span>
               <p>71 - Wast San Park St, New york, NY 98517</p>
             </div>
             <div className={styles.border}></div>

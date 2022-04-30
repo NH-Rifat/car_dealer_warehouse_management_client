@@ -1,0 +1,178 @@
+.inventory_main{
+  margin-bottom: 50px;
+  background-color: rgb(247, 247, 247);
+}
+.inventory_section{
+  margin-top: 120px;
+}
+.inventory_section p{
+  color: gray;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.inventory_section h1{
+  text-align: center;
+  font-weight: 700;
+
+}
+.btn_group{
+  margin-top: 40px;
+}
+.btn_group button{
+  margin: 10px;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: rgb(97, 96, 96);
+  font-weight: 700;
+}
+.btn_group button:hover{
+  background-color: rgb(255, 84, 0);
+  color: white;
+}
+button.seller_btn{
+  background-color: rgb(255, 84, 0);
+  color: white;
+}
+
+
+/* card */
+.inventory_card{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /* grid-gap: 10px; */
+  margin-top: 50px;
+  grid-row-gap: 30px;
+}
+.card{
+  padding: 20px;
+  width: 80%;
+  box-shadow: 1px 1px 5px 2px rgb(231, 229, 227);
+  background-color: white;
+}
+.car_img{
+  /* display: flex; */
+}
+.name_price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.name{
+}
+.name h2{
+  font-size: 20px;
+  font-weight: 700;
+}
+.price{
+
+}
+.price h3{
+  font-size: 23px;
+  background-color: rgb(255, 84, 0);
+  color: white;
+  padding: 6px 20px;
+  /* border-radius: 5px; */
+}
+.line{
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  /* margin-top: 0px; */
+}
+.first_line{
+  width: 60px;
+  height: 6px;
+  background-color: rgb(255, 84, 0);
+  color: black;
+}
+.second_line{
+  width: 20px;
+  height: 6px;
+  background-color: rgb(255, 84, 0);
+  color: black;
+  margin-left: 5px;
+}
+.build_year{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+.build_year p{
+  color: rgb(141, 140, 140);
+  font-family: sans-serif;
+  font-weight: 700;
+}
+.build_year span{
+  color: rgb(73, 72, 72);
+}
+.dotted_border{
+  margin-top: 20px;
+  border-bottom: 1px dotted gray;
+}
+.description p{
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+  margin-top: 5px;
+}
+.dotted_border_des{
+  border-bottom: 1px dotted gray;
+  margin-bottom: 15px;
+}
+.manage_section{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.supplier{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.supply h5{
+  font-size: 17px;
+  background-color: rgb(255, 84, 0);
+  color: white;
+  padding: 5px 12px; 
+}
+.supplier_name h5{
+  font-size: 17px;
+  background-color: rgb(255, 84, 0);
+  color: white;
+  padding: 5px 12px; 
+}
+.update button{
+  font-size: 17px;
+  background-color: rgb(255, 84, 0);
+  color: white;
+  padding: 5px 12px;  
+  border: none;
+  font-weight: 500;
+}
+
+.quantity p{
+  color: white;
+  background-color: rgb(255, 84, 0);
+  padding: 4px 10px;
+  font-weight: 500;
+}
+
+.automatic p{
+  color: rgb(255, 84, 0);
+}
+.automatic span{
+  color: gray;
+}
+.speed p{
+  color: rgb(255, 84, 0);
+}
+.speed span{
+  color: gray;
+  margin-left: 4px;
+}

@@ -10,55 +10,53 @@ const Header = () => {
     <div className={styles.main}>
       <div className={styles.header}>
         <Navbar collapseOnSelect expand='lg' variant='dark' className=''>
-          
-            <Navbar.Brand href='#home'>
-              <img src={logo} alt='' />
-            </Navbar.Brand>
-            <Navbar.Toggle
-              aria-controls='responsive-navbar-nav'
-              style={{ backgroundColor: 'black' }}
-            />
-            <Navbar.Collapse id='responsive-navbar-nav'>
-              <Nav className='me-auto'></Nav>
-              <Nav>
-                <Nav.Link
-                  href='#deets'
-                  style={{ color: 'black' }}
-                  className={styles.nav_item}
-                >
-                  HOME
-                </Nav.Link>
-                <Nav.Link
-                  href='#deets'
-                  style={{ color: 'black' }}
-                  className={styles.nav_item}
-                >
-                  INVENTORY
-                </Nav.Link>
-                <Nav.Link
-                  href='#deets'
-                  style={{ color: 'black' }}
-                  className={styles.nav_item}
-                >
-                  PAGES
-                </Nav.Link>
-                <Nav.Link
-                  href='#deets'
-                  style={{ color: 'black' }}
-                  className={styles.nav_item}
-                >
-                  BLOG
-                </Nav.Link>
-                <Nav.Link
-                  href='#deets'
-                  style={{ color: 'white' }}
-                  className={`${styles.nav_item} ${styles.register}`}
-                >
-                  REGISTER
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          
+          <Navbar.Brand href='#home'>
+            <img src={logo} alt='' className={styles.logo} />
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls='responsive-navbar-nav'
+            style={{ backgroundColor: 'black' }}
+          />
+          <Navbar.Collapse id='responsive-navbar-nav'>
+            <Nav className='me-auto'></Nav>
+            <Nav>
+              <Nav.Link
+                href='#deets'
+                style={{ color: 'black' }}
+                className={styles.nav_item}
+              >
+                HOME
+              </Nav.Link>
+              <Nav.Link
+                href='#deets'
+                style={{ color: 'black' }}
+                className={styles.nav_item}
+              >
+                INVENTORY
+              </Nav.Link>
+              <Nav.Link
+                href='#deets'
+                style={{ color: 'black' }}
+                className={styles.nav_item}
+              >
+                PAGES
+              </Nav.Link>
+              <Nav.Link
+                href='#deets'
+                style={{ color: 'black' }}
+                className={styles.nav_item}
+              >
+                BLOG
+              </Nav.Link>
+              <Nav.Link
+                href='#deets'
+                style={{ color: 'white' }}
+                className={`${styles.nav_item} ${styles.register}`}
+              >
+                REGISTER
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Navbar>
       </div>
     </div>

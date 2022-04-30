@@ -7,13 +7,17 @@
 p.category{
   font-size: 15px;
   letter-spacing: 5px;
+  text-align: center;
+
 }
 .car_model h1{
   font-weight: 700;
   font-size: 40px;
   color: rgb(255, 84, 0);
+  text-align: center;
 }
 .car_section p{
+  font-size: 17px;
 }
 .line{
   display: flex;
@@ -26,7 +30,6 @@ p.category{
   height: 6px;
   background-color: rgb(129, 106, 94);
   color: black;
-
 }
 .secondLine{
   width: 20px;
@@ -42,4 +45,136 @@ p.category{
 }
 .car_section img{
   margin-bottom: 12px;
+}
+/* Responsive */
+
+
+@media only screen and (max-width: 1440px){
+  p.category{
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .car_model h1{
+    font-size: 32px;
+    color: rgb(255, 84, 0);
+  }
+  .car_section{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 100px;
+    grid-gap: 40px 80px;
+  }
+  .car_section img{
+    margin-bottom: 12px;
+  }
+}
+@media only screen and (max-width: 1024px){
+  p.category{
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .car_model h1{
+    font-size: 32px;
+    color: rgb(255, 84, 0);
+  }
+  .car_section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 100px;
+    grid-gap: 40px 80px;
+  }
+  .car_section img{
+    margin-bottom: 12px;
+  }
+}
+@media only screen and (max-width: 768px){
+  p.category{
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .car_model h1{
+    font-size: 32px;
+    color: rgb(255, 84, 0);
+  }
+  .car_section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 100px;
+    grid-gap: 40px 80px;
+  }
+  .car_section p{
+    font-size: 17px;
+  }
+  .car_section img{
+    margin-bottom: 12px;
+    width: 160px;
+  }
+}
+@media only screen and (max-width: 425px){
+  p.category{
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .car_model h1{
+    font-size: 32px;
+    color: rgb(255, 84, 0);
+  }
+  .car_section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 100px;
+    grid-gap: 40px 80px;
+  }
+  .car_section p{
+    font-size: 20px;
+  }
+  .car_section img{
+    margin-bottom: 12px;
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 375px){
+  p.category{
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .car_model h1{
+    font-size: 32px;
+    color: rgb(255, 84, 0);
+  }
+  .car_section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 100px;
+    grid-gap: 40px 80px;
+  }
+  .car_section p{
+    font-size: 20px;
+  }
+  .car_section img{
+    margin-bottom: 12px;
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 320px){
+  p.category{
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .car_model h1{
+    font-size: 32px;
+    color: rgb(255, 84, 0);
+  }
+  .car_section{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 100px;
+  }
+  .car_section p{
+    font-size: 25px;
+  }
+  .car_section img{
+    margin-bottom: 12px;
+    width: 300px;
+  }
 }

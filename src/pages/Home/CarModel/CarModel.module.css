@@ -114,57 +114,57 @@ p.category{
 }
 @media only screen and (max-width: 425px){
   p.category{
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 3px;
   }
   .car_model h1{
-    font-size: 32px;
+    font-size: 25px;
     color: rgb(255, 84, 0);
   }
   .car_section{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     margin-top: 100px;
-    grid-gap: 40px 80px;
+    grid-gap: 40px 40px;
   }
   .car_section p{
     font-size: 20px;
   }
   .car_section img{
     margin-bottom: 12px;
-    width: 170px;
+    width: 100px;
   }
 }
 @media only screen and (max-width: 375px){
   p.category{
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 3px;
   }
   .car_model h1{
-    font-size: 32px;
+    font-size: 25px;
     color: rgb(255, 84, 0);
   }
   .car_section{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     margin-top: 100px;
-    grid-gap: 40px 80px;
+    grid-gap: 40px 50px;
   }
   .car_section p{
     font-size: 20px;
   }
   .car_section img{
     margin-bottom: 12px;
-    width: 170px;
+    width: 120px;
   }
 }
 @media only screen and (max-width: 320px){
   p.category{
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 3px;
   }
   .car_model h1{
-    font-size: 32px;
+    font-size: 22px;
     color: rgb(255, 84, 0);
   }
   .car_section{

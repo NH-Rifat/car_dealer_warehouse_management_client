@@ -197,7 +197,6 @@ const Inventory = () => {
           </div>
         </div>
 
-
         <div className={styles.card}>
           <div className={styles.name_price}>
             <div className={styles.name}>

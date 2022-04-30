@@ -1,0 +1,18 @@
+.main{
+  width: 75%;
+  margin: 0 auto;
+}
+.header{
+  background-color: rgb(253, 253, 253);
+  padding-top: 10px;
+}
+.nav_item{
+  font-size: 17px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.register{
+  background-color: rgb(255, 84, 20);
+  border-radius: 5px;
+}

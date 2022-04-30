@@ -1,0 +1,45 @@
+
+.car_model{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+p.category{
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+.car_model h1{
+  font-weight: 700;
+  font-size: 40px;
+  color: rgb(255, 84, 0);
+}
+.car_section p{
+}
+.line{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 15px;
+}
+.firstLine{
+  width: 60px;
+  height: 6px;
+  background-color: rgb(129, 106, 94);
+  color: black;
+
+}
+.secondLine{
+  width: 20px;
+  height: 6px;
+  background-color: rgb(129, 106, 94);
+  color: black;
+  margin-left: 5px;
+}
+.car_section{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  margin-top: 100px;
+}
+.car_section img{
+  margin-bottom: 12px;
+}

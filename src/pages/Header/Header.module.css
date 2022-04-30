@@ -5,6 +5,7 @@
 .header{
   background-color: rgb(253, 253, 253);
   padding-top: 10px;
+  /* position: fixed; */
 }
 .nav_item{
   font-size: 17px;

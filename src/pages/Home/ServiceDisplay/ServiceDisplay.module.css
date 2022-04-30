@@ -1,0 +1,346 @@
+.service_display{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-top: 190px;
+  margin-bottom: 50px;
+}
+.repair_service{
+  background-color: rgb(255, 85, 0);
+}
+.txt{
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.txt p{
+  color: white;
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+}
+.repair_service h1{
+  display: flex;
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+}
+.repair_guarantee{
+  background-color: rgb(17, 17, 17);
+}
+.icons{
+  display: flex;
+  margin-top: 30px;
+}
+.icon{
+  color: white;
+}
+.review_txt{
+}
+.review_txt span{
+  color: white;
+  margin-left: 15px;
+}
+.dollar{
+  margin-top: 10px;
+}
+.dollar h1{
+  
+}
+.btn{
+  display: flex;
+  margin-top: 30px;
+}
+.btn button{
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: rgb(248, 75, 4);
+  font-weight: 700;
+}
+.guarantee_txt{
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.guarantee_txt span{
+  color: rgb(248, 75, 4);
+  margin-left: 6px;
+}
+.guarantee_txt p{
+  color: white;
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+}
+.guarantee_txt h1{
+  display: flex;
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+}
+.repair_guarantee{
+  background-color: rgb(17, 17, 17);
+}
+.guarantee_icons{
+  display: flex;
+  margin-top: 30px;
+}
+.guarantee_icon{
+  color: rgb(248, 75, 4);
+}
+.repair_review_txt{
+}
+.guarantee_review_txt span{
+  color: white;
+  margin-left: 15px;
+}
+.guarantee_dollar{
+  margin-top: 10px;
+}
+.guarantee_dollar h1{
+  color: rgb(248, 75, 4);
+}
+.guarantee_btn{
+  display: flex;
+  margin-top: 30px;
+}
+.guarantee_btn button{
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: rgb(248, 75, 4);
+  font-weight: 700;
+}
+.repair_guarantee{
+  background-color: rgb(17, 17, 17);
+}
+
+/* Responsive */
+@media only screen and (max-width:1440px){
+  .service_display{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 190px;
+  }
+  .btn button{
+    margin-bottom: 30px;
+    padding: 7px 14px;
+  }
+  .guarantee_btn button{
+    margin-bottom: 30px;
+  }
+  .car_serviceTwo{
+    margin-bottom: 30px;
+  }
+  .txt{
+    width: 85%;
+  }
+  .txt p{
+    font-size: 14px;
+  }
+  .repair_service h1{
+    font-size: 26px;
+  }
+  .guarantee_txt{
+    width: 85%;
+  }
+  .guarantee_txt p{
+    font-size: 14px;
+  }
+  .guarantee_txt h1{
+    font-size: 26px;
+  }
+  .guarantee_btn button{
+    padding: 7px 14px;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .service_display{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 190px;
+  }
+  .btn button{
+    margin-bottom: 30px;
+    padding: 7px 14px;
+  }
+  .guarantee_btn button{
+    margin-bottom: 30px;
+  }
+  .car_serviceTwo{
+    margin-bottom: 30px;
+  }
+  .txt{
+    width: 85%;
+  }
+  .txt p{
+    font-size: 14px;
+  }
+  .repair_service h1{
+    font-size: 26px;
+  }
+  .guarantee_txt{
+    width: 85%;
+  }
+  .guarantee_txt p{
+    font-size: 14px;
+  }
+  .guarantee_txt h1{
+    font-size: 26px;
+  }
+  .guarantee_btn button{
+    padding: 7px 14px;
+  }
+}
+@media only screen and (max-width: 768px){
+  .service_display{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 190px;
+  }
+  .btn button{
+    margin-bottom: 30px;
+    padding: 7px 14px;
+  }
+  .guarantee_btn button{
+    margin-bottom: 30px;
+  }
+  .car_serviceTwo{
+    margin-bottom: 30px;
+  }
+  .txt{
+    width: 85%;
+  }
+  .txt p{
+    font-size: 14px;
+  }
+  .repair_service h1{
+    font-size: 26px;
+  }
+  .guarantee_txt{
+    width: 85%;
+  }
+  .guarantee_txt p{
+    font-size: 14px;
+  }
+  .guarantee_txt h1{
+    font-size: 26px;
+  }
+  .guarantee_btn button{
+    padding: 7px 14px;
+  }
+}
+@media only screen and (max-width: 425px){
+  .service_display{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 190px;
+  }
+  .btn button{
+    margin-bottom: 30px;
+    padding: 7px 14px;
+  }
+  .guarantee_btn button{
+    margin-bottom: 30px;
+  }
+  .car_serviceTwo{
+    margin-bottom: 30px;
+  }
+  .txt{
+    width: 85%;
+  }
+  .txt p{
+    font-size: 14px;
+  }
+  .repair_service h1{
+    font-size: 26px;
+  }
+  .guarantee_txt{
+    width: 85%;
+  }
+  .guarantee_txt p{
+    font-size: 14px;
+  }
+  .guarantee_txt h1{
+    font-size: 26px;
+  }
+  .guarantee_btn button{
+    padding: 7px 14px;
+  }
+}
+@media only screen and (max-width: 375px){
+  .service_display{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 190px;
+  }
+  .btn button{
+    margin-bottom: 30px;
+    padding: 7px 14px;
+  }
+  .guarantee_btn button{
+    margin-bottom: 30px;
+  }
+  .car_serviceTwo{
+    margin-bottom: 30px;
+  }
+  .txt{
+    width: 85%;
+  }
+  .txt p{
+    font-size: 14px;
+  }
+  .repair_service h1{
+    font-size: 26px;
+  }
+  .guarantee_txt{
+    width: 85%;
+  }
+  .guarantee_txt p{
+    font-size: 14px;
+  }
+  .guarantee_txt h1{
+    font-size: 26px;
+  }
+  .guarantee_btn button{
+    padding: 7px 14px;
+  }
+}
+@media only screen and (max-width: 320px){
+  .service_display{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 190px;
+  }
+  .btn button{
+    margin-bottom: 30px;
+    padding: 6px 12px;
+  }
+  .guarantee_btn button{
+    margin-bottom: 30px;
+  }
+  .car_serviceTwo{
+    margin-bottom: 30px;
+  }
+  .txt{
+    width: 85%;
+  }
+  .txt p{
+    font-size: 12px;
+  }
+  .repair_service h1{
+    font-size: 22px;
+  }
+  .guarantee_txt{
+    width: 85%;
+  }
+  .guarantee_txt p{
+    font-size: 12px;
+  }
+  .guarantee_txt h1{
+    font-size: 22px;
+  }
+  .guarantee_btn button{
+    padding: 6px 12px;
+  }
+}

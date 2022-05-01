@@ -10,7 +10,7 @@ const Header = () => {
     <div className={styles.main}>
       <div className={styles.header}>
         <Navbar collapseOnSelect expand='lg' variant='dark' className=''>
-          <Navbar.Brand href='#home'>
+          <Navbar.Brand as={Link} to='/' href='#home'>
             <img src={logo} alt='' className={styles.logo} />
           </Navbar.Brand>
           <Navbar.Toggle
@@ -27,7 +27,7 @@ const Header = () => {
               >
                 HOME
               </Nav.Link>
-              <Nav.Link
+              <Nav.Link as={Link} to='/manageInventory'
                 href='#deets'
                 style={{ color: 'black' }}
                 className={styles.nav_item}
@@ -41,7 +41,7 @@ const Header = () => {
               >
                 PAGES
               </Nav.Link>
-              <Nav.Link
+              <Nav.Link as={Link} to='/blog'
                 href='#deets'
                 style={{ color: 'black' }}
                 className={styles.nav_item}

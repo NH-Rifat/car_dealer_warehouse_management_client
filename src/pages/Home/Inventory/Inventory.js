@@ -371,6 +371,9 @@ const Inventory = () => {
           </div>
         </div>
       </div>
+      <div className={styles.manage_inventory}>
+        <h2>Manage Inventories</h2>
+      </div>
     </div>
   );
 };

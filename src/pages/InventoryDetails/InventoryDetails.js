@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Inventory.module.css';
+import styles from './InventoryDetails.module.css';
 import { GoLocation } from 'react-icons/go';
 
 import car_image1 from '../../images/s_released_cars_thumb01.jpg';
 
-const Inventory = () => {
+const InventoryDetails = () => {
   return (
     <div>
       <div className={styles.manage_Inventory}>
@@ -73,4 +73,4 @@ const Inventory = () => {
   );
 };
 
-export default Inventory;
+export default InventoryDetails;

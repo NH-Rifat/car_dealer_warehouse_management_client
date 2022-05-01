@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './ManageInventory.module.css';
-import { GoLocation } from "react-icons/go";
+import { GoLocation } from 'react-icons/go';
 import car_image1 from '../../images/s_released_cars_thumb01.jpg';
 import car_image2 from '../../images/s_released_cars_thumb02.jpg';
 import car_image3 from '../../images/s_released_cars_thumb03.jpg';
-
 
 const ManageInventory = () => {
   return (
@@ -38,7 +37,9 @@ const ManageInventory = () => {
               <h3>BMW 8- Series 2-Door</h3>
             </div>
             <div className={styles.location_info}>
-              <span className={styles.location_icon}><GoLocation></GoLocation></span>
+              <span className={styles.location_icon}>
+                <GoLocation></GoLocation>
+              </span>
               <p>71 - Wast San Park St, New york, NY 98517</p>
             </div>
             <div className={styles.border}></div>
@@ -57,7 +58,6 @@ const ManageInventory = () => {
             </div>
           </div>
         </div>
-
 
         <div className={styles.inventory_card}>
           <div className={styles.item_img}>
@@ -144,8 +144,6 @@ const ManageInventory = () => {
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   );

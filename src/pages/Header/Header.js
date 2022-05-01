@@ -20,7 +20,7 @@ const Header = () => {
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='me-auto'></Nav>
             <Nav>
-              <Nav.Link
+              <Nav.Link as={Link} to='/'
                 href='#deets'
                 style={{ color: 'black' }}
                 className={styles.nav_item}

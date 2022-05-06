@@ -1,11 +1,21 @@
-.main{
-  width: 75%;
+/* .main{
+  width: 100%;
   margin: 0 auto;
-}
+} */
 .header{
   background-color: rgb(253, 253, 253);
-  padding-top: 10px;
-  /* position: fixed; */
+  padding-top: 5px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1234;
+  box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+  /* margin-bottom: 100px; */
+}
+.nab_bar{
+  width: 75%;
+  margin: 0 auto;
 }
 .nav_item{
   font-size: 17px;

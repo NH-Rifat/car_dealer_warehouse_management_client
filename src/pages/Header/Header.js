@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className={styles.main}>
       <div className={styles.header}>
-        <Navbar collapseOnSelect expand='lg' variant='dark' className=''>
+        <Navbar collapseOnSelect expand='lg' variant='dark' className={styles.nab_bar}>
           <Navbar.Brand as={Link} to='/' href='#home'>
             <img src={logo} alt='' className={styles.logo} />
           </Navbar.Brand>
@@ -48,7 +48,7 @@ const Header = () => {
               >
                 BLOG
               </Nav.Link>
-              <Nav.Link
+              <Nav.Link as={Link} to='/register'
                 href='#deets'
                 style={{ color: 'white' }}
                 className={`${styles.nav_item} ${styles.register}`}

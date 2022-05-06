@@ -8,6 +8,7 @@ import car_image3 from '../../../images/s_released_cars_thumb03.jpg';
 import car_image4 from '../../../images/s_released_cars_thumb04.jpg';
 import car_image5 from '../../../images/s_released_cars_thumb05.jpg';
 import car_image6 from '../../../images/s_released_cars_thumb06.jpg';
+import { Link } from 'react-router-dom';
 
 const Inventory = () => {
   return (
@@ -372,7 +373,9 @@ const Inventory = () => {
         </div>
       </div>
       <div className={styles.manage_inventory}>
-        <h2>Manage Inventories</h2>
+        <h2>
+          <Link to='/manageInventory'>Manage Inventory</Link>
+        </h2>
       </div>
     </div>
   );

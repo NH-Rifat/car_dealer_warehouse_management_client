@@ -1,0 +1,29 @@
+.social_login{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.google{
+
+}
+.social{
+  width: 350px;
+  padding: 10px;
+}
+.social button{
+  width: 100%;
+  padding: 8px 0px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid gray;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social button img{
+  width: 30px;
+}
+.social button span{
+  margin-left: 6px;
+}

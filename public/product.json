@@ -1,5 +1,15 @@
 [
   {
+    "name":"MERCEDEZ BENZ EI8",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "img":"https://i.ibb.co/n8pzhQm/s-released-cars-thumb03.jpg.jpg"
+  },
+  {
     "name":"JAGUER M1 HYBRID",
     "price":2300,
     "stock":8,
@@ -7,6 +17,46 @@
     "supplier":"Great Wall",
     "mileage":7500,
     "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
-    "img":""
+    "img":"https://i.ibb.co/TwWJGzc/s-released-cars-thumb01.jpg"
+  },
+  {
+    "name":"AUDI A8 HYBRID",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "img":"https://i.ibb.co/R2R9BxC/s-released-cars-thumb04.jpg"
+  },
+  {
+    "name":"AUDI NEW BOM 800",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "img":"https://i.ibb.co/2v8vFC5/s-released-cars-thumb05.jpg.jpg"
+  },
+  {
+    "name":"AUDI NEW BOM 800",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
+  },
+  {
+    "name":"JAGUER M1 HYBRID",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "img":"https://i.ibb.co/dPRt2bP/s-released-cars-thumb06.jpg.jpg"
   }
 ]

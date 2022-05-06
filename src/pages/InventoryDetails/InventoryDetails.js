@@ -10,10 +10,10 @@ const InventoryDetails = () => {
   const [item, setItem] = useState({});
 
   useEffect(() => {
-		fetch(`http://localhost:5000/product/${id}`)
-		.then(res=>res.json())
-		.then(data=>setItem(data))
-	}, []);
+    fetch(`http://localhost:5000/product/${id}`)
+      .then((res) => res.json())
+      .then((data) => setItem(data));
+  }, []);
 
   return (
     <div>

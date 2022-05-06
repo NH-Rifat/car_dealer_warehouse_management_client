@@ -5,6 +5,7 @@ import banner1 from '../../../images/banner7.jpg';
 import styles from './Register.module.css';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../Loading/Loading';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -17,6 +18,10 @@ const Register = () => {
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   const handleSubmitWithNameEmailAndPassword =(event) => {
     event.preventDefault();

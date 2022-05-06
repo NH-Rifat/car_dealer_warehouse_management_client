@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import banner1 from '../../../images/banner3.jpg';
 import styles from './Login.module.css';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import Loading from '../../Loading/Loading';
 
 const Login = () => {
   let errorElement = '';
@@ -12,6 +13,20 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  let from = location.state?.from?.pathname || '/';
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
+
+  if (user) {
+    navigate(from, { replace: true });
+  }
+
   if (error) {
     errorElement = <p className='text-danger'>Error: {error?.message}</p>;
   }
@@ -53,9 +68,7 @@ const Login = () => {
                 <div className={styles.inputBx}>
                   <p></p>
                 </div>
-                {
-                  errorElement
-                }
+                {errorElement}
                 <div className={styles.inputBx}>
                   <input type='submit' value='Sign in' />
                 </div>

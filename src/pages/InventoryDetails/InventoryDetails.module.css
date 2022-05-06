@@ -6,6 +6,7 @@
 .manage_Inventory{
   width: 50%;
   margin: 0 auto;
+  margin-top: 100px;
 }
 .total_card h2{
   font-size: 28px;
@@ -133,6 +134,7 @@
   outline: none;
   padding: 0 25px;
   border-radius: 25px 0 0 25px;
+  /* color: rgb(255, 84, 0); */
 }
 .reStock_form input[type="submit"]{
   position: relative;
@@ -145,7 +147,7 @@
   background: rgb(255, 84, 0);
   color: #fff;
   left: -6px;
-  top: -1px;
+  top: 1px;
 }
 .reStock_form input[type="submit"]:hover{
   background: rgb(60, 60, 69);

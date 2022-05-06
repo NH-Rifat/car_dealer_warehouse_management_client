@@ -22,7 +22,22 @@
   font-weight: 600;
   margin: 10px;
 }
-
+.signOut_btn{
+  color: white;
+  font-weight: 600;
+  border: 0;
+  padding: 0px 12px;
+  background-color: rgb(255, 84, 20);
+  border-radius: 5px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+.signOutIcon{
+  margin-left: 5px;
+}
 .register{
   background-color: rgb(255, 84, 20);
   border-radius: 5px;

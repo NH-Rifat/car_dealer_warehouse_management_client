@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './InventoryDetails.module.css';
 import { GoLocation } from 'react-icons/go';
 
-import car_image1 from '../../images/s_released_cars_thumb01.jpg';
+import { useParams } from 'react-router-dom';
 
 const InventoryDetails = () => {
+  const { id } = useParams();
+  // console.log(id);
+  const [item, setItem] = useState({});
+
+  useEffect(() => {
+		fetch(`http://localhost:5000/product/${id}`)
+		.then(res=>res.json())
+		.then(data=>setItem(data))
+	}, []);
+
   return (
     <div>
       <div className={styles.manage_Inventory}>
@@ -13,17 +23,17 @@ const InventoryDetails = () => {
         </div>
         <div className={styles.inventory_card}>
           <div className={styles.item_img}>
-            <img src={car_image1} alt='' />
+            <img src={item.img} alt='' />
           </div>
           <div className={styles.inventory_info}>
             <div className={styles.supplier_price}>
               <div className={styles.supplier}>
                 <h5 className={styles.supply_heading}>Supplier</h5>
-                <h5 className={styles.supplier_name}>Elon Mask</h5>
+                <h5 className={styles.supplier_name}>{item.supplier}</h5>
               </div>
               <div className={styles.price}>
                 <p>
-                  $<span>29,000</span>
+                  $<span>{item.price}</span>
                 </p>
               </div>
             </div>
@@ -31,7 +41,7 @@ const InventoryDetails = () => {
               <p>Calculate Financing</p>
             </div>
             <div className={styles.inventory_name}>
-              <h3>BMW 8- Series 2-Door</h3>
+              <h3>{item.name}</h3>
             </div>
             <div className={styles.location_info}>
               <span className={styles.location_icon}>
@@ -43,7 +53,7 @@ const InventoryDetails = () => {
             <div className={styles.other_info}>
               <div className={styles.stock}>
                 <p>
-                  In stock: <span>5</span>
+                  In stock: <span>{item.stock}</span>
                 </p>
               </div>
               <div className={styles.Delivered}>

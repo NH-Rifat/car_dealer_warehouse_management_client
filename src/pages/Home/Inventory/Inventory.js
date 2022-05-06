@@ -7,13 +7,14 @@ import { Link } from 'react-router-dom';
 import InventoryItem from '../../InventoryItem/InventoryItem';
 
 const Inventory = () => {
-  const [product,setProduct]=useState([]);
+  const [product, setProduct] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch(`http://localhost:5000/product`)
-    .then(res=>res.json())
-    .then(data=>setProduct(data))
-  },[])
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
+  }, []);
+  // console.log(product);
   return (
     <div className={styles.inventory_main}>
       <div className={styles.inventory_section}>
@@ -27,12 +28,12 @@ const Inventory = () => {
       </div>
 
       <div className={styles.inventory_card}>
-        {
-          product.map(singleProduct=><InventoryItem
+        {product.slice(0, 6).map((singleProduct) => (
+          <InventoryItem
             key={singleProduct._id}
             item={singleProduct}
-            ></InventoryItem>)
-        }
+          ></InventoryItem>
+        ))}
       </div>
       <div className={styles.manage_inventory}>
         <h2>

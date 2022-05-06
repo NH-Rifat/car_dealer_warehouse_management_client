@@ -50,6 +50,36 @@
     "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
   },
   {
+    "name":"AUDI NEW BOM 800",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
+  },
+  {
+    "name":"AUDI NEW BOM 800",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
+  },
+  {
+    "name":"AUDI NEW BOM 800",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
+  },
+  {
     "name":"JAGUER M1 HYBRID",
     "price":2300,
     "stock":8,

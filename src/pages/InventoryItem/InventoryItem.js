@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './InventoryItem.module.css';
 import { GiAutoRepair } from 'react-icons/gi';
 import { ImRoad } from 'react-icons/im';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const InventoryItem = ({ item }) => {
   const {
+    _id,
     name,
     price,
     stock,
@@ -15,6 +16,19 @@ const InventoryItem = ({ item }) => {
     description,
     img,
   } = item;
+
+  let navigate = useNavigate();
+
+  // const [item,setItem]=useState({})
+
+  // useEffect(()=>{
+    
+  // },[])
+
+  const handleManage=(itemId)=>{
+    navigate(`/inventoryDetails/${itemId}`)
+  }
+  
   return (
     <div className={styles.card}>
       <div className={styles.name_price}>
@@ -54,7 +68,7 @@ const InventoryItem = ({ item }) => {
       <div className={styles.dotted_border_des}></div>
       <div className={styles.manage_section}>
         <div className={styles.update}>
-          <button>Manage</button>
+          <button onClick={()=>handleManage(_id)}>Manage</button>
         </div>
         <div className={styles.automatic}>
           <p>

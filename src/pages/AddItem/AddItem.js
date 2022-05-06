@@ -11,28 +11,30 @@ const AddItem = () => {
         </div>
         <div className={styles.contentBx}>
           <div className={styles.formBx}>
-            <h2>Please Add your items</h2>
+            <h2>Please Add your Car</h2>
             <form>
               <div className={styles.inputBx}>
-                <span>Name</span>
+                <span>Brand Name</span>
                 <input type='text' name='name' />
               </div>
               <div className={styles.inputBx}>
-                <span>Email</span>
-                <input type='email' name='email' />
+                <span>Supplier</span>
+                <input type='text' name='name' />
               </div>
               <div className={styles.inputBx}>
-                <span>Password</span>
-                <input type='password' name='password' />
-              </div>
-              <div className='agree'>
-                <label htmlFor='checkbox'>
-                  <input type='checkbox' name='terms' id='checkbox' />
-                  Agree terms and conditions
-                </label>
+                <span>Price</span>
+                <input type='text' name='name' />
               </div>
               <div className={styles.inputBx}>
-                <input type='submit' value='Sign up' />
+                <span>Quantity</span>
+                <input type='text' name='name' />
+              </div>
+              <div className={styles.inputBx}>
+                <span>image url</span>
+                <input type='text' name='name' />
+              </div>
+              <div className={styles.inputBx}>
+                <input type='submit' value='ADD ITEM' />
               </div>
             </form>
           </div>

@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import banner1 from '../../../images/banner7.jpg';
 import styles from './Register.module.css';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
 const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
   const [
-    signInWithEmailAndPassword,
-    userOfEmailPassword,
-    loadingOfEmailPassword,
-    errorOfEmailPassword,
-  ] = useSignInWithEmailAndPassword(auth);
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
 
-  const handleSubmitWithEmailAndPassword = (event) => {
-    const name = event.target.name.value;
-    // const email = event.target.email.value;
-    // const password = event.target.password.value;
-    console.log(name);
+  const handleSubmitWithNameEmailAndPassword =(event) => {
     event.preventDefault();
+    // console.log(name,email,password);
+    createUserWithEmailAndPassword(email, password);
+    event.target.value.reset();
   };
   return (
     <div className={styles.login_container}>
@@ -33,7 +33,7 @@ const Register = () => {
         <div className={styles.contentBx}>
           <div className={styles.formBx}>
             <h2>Register</h2>
-            <form onClick={handleSubmitWithEmailAndPassword}>
+            <form onSubmit={handleSubmitWithNameEmailAndPassword}>
               <div className={styles.inputBx}>
                 <span>Username</span>
                 <input

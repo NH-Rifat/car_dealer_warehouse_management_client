@@ -70,7 +70,7 @@ const Header = () => {
               </Nav.Link>
               {user ? (
                 <button className={styles.signOut_btn} onClick={handleSignOut}>
-                {user.displayName}
+                {user?.displayName || user?.email.slice(0,5)}
                 <span className={styles.signOutIcon}><FaSignOutAlt></FaSignOutAlt></span>
                 
                 </button>

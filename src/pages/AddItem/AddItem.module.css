@@ -69,6 +69,16 @@
   font-weight: 300;
   font-size: 16px;
   letter-spacing: 1px;
+  display: flex;
+  margin-left: 2%;
+}
+.text_area{
+  display: block;
+  border: 1px solid #607d8b;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+  color: rgb(88, 106, 139);
 }
 .section .contentBx .formBx .inputBx input{
   width: 100%;

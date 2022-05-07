@@ -8,12 +8,49 @@ const InventoryDetails = () => {
   const { id } = useParams();
   // console.log(id);
   const [item, setItem] = useState({});
+  const [rendered, setRendered] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/product/${id}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
-  }, []);
+  }, [id, rendered]);
+
+  const handleDelivered = () => {
+    let quantity = parseInt(item.stock) - 1;
+
+    if (quantity) {
+      fetch(`http://localhost:5000/product/${id}`, {
+        method: 'PUT',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ quantity }),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+      setRendered(!rendered);
+    }
+  };
+
+  const handleStockUpdate = (event) => {
+    event.preventDefault();
+
+    const newStock =
+      parseInt(event.target.stockQuantity.value) + parseInt(item.stock);
+
+    const quantityObj = { newStock };
+
+    if (quantityObj) {
+      fetch(`http://localhost:5000/productStock/${id}`, {
+        method: 'PUT',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(quantityObj),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+      setRendered(!rendered);
+      event.target.reset();
+    }
+  };
 
   return (
     <div>
@@ -57,7 +94,7 @@ const InventoryDetails = () => {
                 </p>
               </div>
               <div className={styles.Delivered}>
-                <button>Delivered</button>
+                <button onClick={handleDelivered}>Delivered</button>
               </div>
             </div>
           </div>
@@ -66,11 +103,14 @@ const InventoryDetails = () => {
           <h3>Please Re-stock Your Car Item</h3>
           <div className={styles.box}>
             <div className={styles.input_area}>
-              <form action='' className={styles.reStock_form}>
+              <form
+                onSubmit={handleStockUpdate}
+                className={styles.reStock_form}
+              >
                 <input
                   type='text'
                   id='input-field'
-                  name=''
+                  name='stockQuantity'
                   placeholder='Give me a quantity...'
                 />
                 <input type='submit' id='input-btn' name='' value='Re-stock' />

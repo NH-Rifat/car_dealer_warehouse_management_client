@@ -5,7 +5,6 @@ import Blogs from './pages/Blogs/Blogs';
 import Header from './pages/Header/Header';
 import Home from './pages/Home/Home';
 import InventoryDetails from './pages/InventoryDetails/InventoryDetails';
-import Inventory from './pages/InventoryDetails/InventoryDetails';
 import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';

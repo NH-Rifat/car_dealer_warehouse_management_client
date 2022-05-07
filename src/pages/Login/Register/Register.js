@@ -12,18 +12,14 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const [
-    createUserWithEmailAndPassword,
-    user,
-    loading,
-    error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
   if (loading) {
     return <Loading></Loading>;
   }
 
-  const handleSubmitWithNameEmailAndPassword =(event) => {
+  const handleSubmitWithNameEmailAndPassword = (event) => {
     event.preventDefault();
     // console.log(name,email,password);
     createUserWithEmailAndPassword(email, password);
@@ -76,7 +72,7 @@ const Register = () => {
                 </label>
               </div>
               <div className={styles.inputBx}>
-                <input type='submit' value='Sign up' />
+                <input type='submit' value='Sign up' disabled /> 
               </div>
               <div className={styles.inputBx}>
                 <p>

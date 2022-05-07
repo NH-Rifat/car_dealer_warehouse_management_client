@@ -1,42 +1,4 @@
-.inventory_container{
-  background-color: rgb(247, 247, 247);
-  width: 100%;
-  height: 100%;
-  margin-top: 86px;
-}
-.manage_Inventory{
-  width: 50%;
-  margin: 0 auto;
-}
-.total_card{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.add_car_btn{
-  margin-top: 20px;
-  border: none;
-  color: white;
-  padding: 10px 30px;
-  border-radius: 5px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  background-color: rgb(24, 21, 20);
-
-}
-.add_car_btn:hover{
-  background-color: rgb(255, 84, 0);
-}
-.total_card h2{
-  font-size: 28px;
-  display: flex;
-  margin-top: 20px;
-}
-.total_card span{
-  color:rgb(255, 84, 0);
-  margin-left: 10px;
-}
-/* .inventory_card{
+.inventory_card{
   width: 85%;
   padding: 25px;
   display: flex;
@@ -88,6 +50,7 @@
 }
 .location_info{
   display: flex;
+  /* justify-content: space-around; */
 }
 .location_info span{
   color: rgb(255, 84, 0);
@@ -110,17 +73,24 @@
   color: white;
   background-color: rgb(255, 84, 0);
   border-radius: 5px;
+  padding: 5px;
 }
 .update button{
   border: none;
   color: white;
   background-color: rgb(255, 84, 0);
   border-radius: 5px;
-  
+  padding: 5px;
+}
+.delete button:hover{
+  background-color: black;
+}
+.update button:hover{
+  background-color: black;
 }
 .stock p{
   color: rgb(80, 77, 77);
-} */
+}
 
 @media only screen and (max-width: 1440px){
   .manage_Inventory{
@@ -136,8 +106,9 @@
     margin-top: 50px;
   }
 
-  /* .inventory_card{
+  .inventory_card{
     width: 80%;
+    /* flex-direction: column; */
     margin: 0 auto;
     margin-bottom: 20px;
     margin-left: 30%;
@@ -155,7 +126,7 @@
   .inventory_name h3{
     display: flex;
     font-size: 22px;
-  } */
+  }
 }
 @media only screen and (max-width: 1024px){
   .manage_Inventory{
@@ -172,14 +143,14 @@
   }
 
   .inventory_card{
-    /* width: 80%; */
+    width: 80%;
     /* flex-direction: column; */
-    /* margin: 0 auto; */
-    /* margin-bottom: 20px; */
+    margin: 0 auto;
+    margin-bottom: 20px;
     /* margin-left: 50%; */
   }
 
-  /* .location_info p{
+  .location_info p{
     font-size: 16px;
     margin-left: 2px;
   }
@@ -191,7 +162,7 @@
   .inventory_name h3{
     display: flex;
     font-size: 22px;
-  } */
+  }
 }
 @media only screen and (max-width: 768px){
   .manage_Inventory{
@@ -206,10 +177,11 @@
     justify-content: center;
   }
 
-  /* .inventory_card{
+  .inventory_card{
     width: 80%;
     flex-direction: column;
     margin: 0 auto;
+    /* padding: 10px; */
     margin-bottom: 20px;
     margin-left: 30%;
 
@@ -227,7 +199,7 @@
   .inventory_name h3{
     display: flex;
     font-size: 22px;
-  } */
+  }
 }
 
 @media only screen and (max-width: 425px){
@@ -240,7 +212,7 @@
     display: flex;
   }
 
-  /* .inventory_card{
+  .inventory_card{
     width: 95%;
     flex-direction: column;
     margin-bottom: 20px;
@@ -258,7 +230,7 @@
   .inventory_name h3{
     display: flex;
     font-size: 20px;
-  } */
+  }
 }
 
 @media only screen and (max-width: 375px){
@@ -272,10 +244,11 @@
     display: flex;
   }
 
-  /* .inventory_card{
+  .inventory_card{
     width: 98%;
     flex-direction: column;
     margin-bottom: 20px;
+    /* padding: 10px; */
   }
   .item_img{
     overflow: hidden;
@@ -293,5 +266,5 @@
   .inventory_name h3{
     display: flex;
     font-size: 18px;
-  } */
+  }
 }

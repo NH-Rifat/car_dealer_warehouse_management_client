@@ -22,13 +22,13 @@ const InventoryItem = ({ item }) => {
   // const [item,setItem]=useState({})
 
   // useEffect(()=>{
-    
+
   // },[])
 
-  const handleManage=(itemId)=>{
-    navigate(`/inventoryDetails/${itemId}`)
-  }
-  
+  const handleManage = (itemId) => {
+    navigate(`/inventoryDetails/${itemId}`);
+  };
+
   return (
     <div className={styles.card}>
       <div className={styles.name_price}>
@@ -63,12 +63,14 @@ const InventoryItem = ({ item }) => {
       </div>
       <div className={styles.dotted_border}></div>
       <div className={styles.description}>
-        <p>{description.slice(0, 160)}... <Link to="/">see more</Link></p>
+        <p>
+          {description.slice(0, 160)}... <Link to='/'>see more</Link>
+        </p>
       </div>
       <div className={styles.dotted_border_des}></div>
       <div className={styles.manage_section}>
         <div className={styles.update}>
-          <button onClick={()=>handleManage(_id)}>Manage</button>
+          <button onClick={() => handleManage(_id)}>Manage</button>
         </div>
         <div className={styles.automatic}>
           <p>

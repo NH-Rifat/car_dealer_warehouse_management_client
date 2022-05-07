@@ -6,15 +6,15 @@ import auth from '../../firebase.init';
 import logo from '../../images/brand_logo.png';
 // import './Header.css';
 import styles from './Header.module.css';
-import { FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt } from 'react-icons/fa';
 import { signOut } from 'firebase/auth';
 
 const Header = () => {
   const [user] = useAuthState(auth);
 
-  const handleSignOut=()=>{
+  const handleSignOut = () => {
     signOut(auth);
-  }
+  };
   return (
     <div className={styles.main}>
       <div className={styles.header}>
@@ -43,7 +43,8 @@ const Header = () => {
               >
                 HOME
               </Nav.Link>
-              <Nav.Link
+              {
+                user?'':<Nav.Link
                 as={Link}
                 to='/manageInventory'
                 href='#deets'
@@ -52,13 +53,39 @@ const Header = () => {
               >
                 INVENTORY
               </Nav.Link>
-              <Nav.Link
-                href='#deets'
-                style={{ color: 'black' }}
-                className={styles.nav_item}
-              >
-                PAGES
-              </Nav.Link>
+              }
+
+              {user && (
+                <>
+                  <Nav.Link
+                    as={Link}
+                    to='/myItems'
+                    href='#deets'
+                    style={{ color: 'black' }}
+                    className={styles.nav_item}
+                  >
+                    MY ITEMS
+                  </Nav.Link>
+                  <Nav.Link
+                    as={Link}
+                    to='/addItems'
+                    href='#deets'
+                    style={{ color: 'black' }}
+                    className={styles.nav_item}
+                  >
+                    ADD ITEMS
+                  </Nav.Link>
+                  <Nav.Link
+                    as={Link}
+                    to='/manageInventory'
+                    href='#deets'
+                    style={{ color: 'black' }}
+                    className={styles.nav_item}
+                  >
+                    MANAGE ITEMS
+                  </Nav.Link>
+                </>
+              )}
               <Nav.Link
                 as={Link}
                 to='/blog'
@@ -70,9 +97,10 @@ const Header = () => {
               </Nav.Link>
               {user ? (
                 <button className={styles.signOut_btn} onClick={handleSignOut}>
-                {user?.displayName || user?.email.slice(0,5)}
-                <span className={styles.signOutIcon}><FaSignOutAlt></FaSignOutAlt></span>
-                
+                  {user?.displayName || user?.email.slice(0, 5)}
+                  <span className={styles.signOutIcon}>
+                    <FaSignOutAlt></FaSignOutAlt>
+                  </span>
                 </button>
               ) : (
                 <Nav.Link

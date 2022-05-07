@@ -21,28 +21,34 @@ const ManageInventory = () => {
 
   const handleDeleteItem = (id) => {
     // console.log('handleDeleteItem',id);
-    const confirmation = window.confirm('Are you Sure to Delete?');
-    if (confirmation) {
-      fetch(`http://localhost:5000/product/${id}`, {
-        method: 'DELETE',
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.deletedCount > 0) {
-            const remainingProduct = products.filter((item) => item._id !== id);
-            setProducts(remainingProduct);
-          }
-        });
+    if (user) {
+      const confirmation = window.confirm('Are you Sure to Delete?');
+      if (confirmation) {
+        fetch(`http://localhost:5000/product/${id}`, {
+          method: 'DELETE',
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              const remainingProduct = products.filter(
+                (item) => item._id !== id
+              );
+              setProducts(remainingProduct);
+            }
+          });
+      }
+    } else {
+      navigate('/login');
     }
   };
 
   const handleAddNewCar = () => {
     // console.log('handleAddNewCar');
     // console.log(user);
-    if(user){
-      navigate('/addItems')
-    }else{
-      navigate('/login')
+    if (user) {
+      navigate('/addItems');
+    } else {
+      navigate('/login');
     }
   };
 

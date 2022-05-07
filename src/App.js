@@ -6,6 +6,7 @@ import Header from './pages/Header/Header';
 import Home from './pages/Home/Home';
 import InventoryDetails from './pages/InventoryDetails/InventoryDetails';
 import Login from './pages/Login/Login/Login';
+import MyItems from './pages/Login/MyItems/MyItems';
 import Register from './pages/Login/Register/Register';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 import ManageInventory from './pages/ManageInventory/ManageInventory';
@@ -32,6 +33,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/addItems' element={<AddItem></AddItem>}></Route>
+        <Route path='/myItems' element={<MyItems></MyItems>}></Route>
       </Routes>
     </div>
   );

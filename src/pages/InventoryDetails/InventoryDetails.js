@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import styles from './InventoryDetails.module.css';
 import { GoLocation } from 'react-icons/go';
 
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const InventoryDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate()
   // console.log(id);
   const [item, setItem] = useState({});
   const [rendered, setRendered] = useState(false);
@@ -52,11 +53,18 @@ const InventoryDetails = () => {
     }
   };
 
+  const handleAddNewCar = () => {
+    navigate(`/manageInventory`);
+  };
+
   return (
     <div>
       <div className={styles.manage_Inventory}>
         <div className={styles.total_card}>
           <h2>Please Manage Your Car Stock</h2>
+          <button onClick={handleAddNewCar} className={styles.add_car_btn}>
+            Manage Inventory
+          </button>
         </div>
         <div className={styles.inventory_card}>
           <div className={styles.item_img}>

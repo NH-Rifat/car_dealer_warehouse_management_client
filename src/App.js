@@ -10,6 +10,7 @@ import MyItems from './pages/Login/MyItems/MyItems';
 import Register from './pages/Login/Register/Register';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 import ManageInventory from './pages/ManageInventory/ManageInventory';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           }
         ></Route>
         <Route path='/myItems' element={<MyItems></MyItems>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

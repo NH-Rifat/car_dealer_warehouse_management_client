@@ -1,0 +1,299 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.footer_main{
+  background-color: rgb(32, 29, 39);
+  margin-top: 150px;
+  
+}
+.footer_container{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.contact_section{
+  background-color: rgb(18, 18, 24);
+  padding: 50px;
+}
+.contact_section h3{
+  color: white;
+  display: flex;
+}
+.contact_section p{
+  color: white;
+  display: flex;
+  text-align: justify;
+  margin-top: 30px;
+}
+.phone_icon_section{
+  display: flex;
+  align-items: center;
+}
+
+.email_icon_section{
+  display: flex;
+  align-items: center;
+
+}
+.email_icon_section h4{
+  font-size: 15px;
+}
+.address_icon_section{
+  display: flex;
+  align-items: center;
+}
+.address_icon_section h4{
+  font-size: 15px;
+}
+.icon_details{
+  margin-left: 15px;
+}
+.icon_details p{
+  color: rgb(167, 162, 162);
+  font-size: 13px;
+}
+.icon_details h4{
+  font-size: 14px;
+  color: white;
+  display: flex;
+  /* justify-content: center; */
+}
+
+.phoneIcon{
+  color: white;
+  background-color: rgb(255, 84, 0);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.emailIcon{
+  color: white;
+  background-color: rgb(218, 48, 49);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+
+}
+.locationIcon{
+  color: white;
+  background-color: rgb(51, 144, 147);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+
+}
+.info_link_subscribe_section{
+  padding: 40px;
+}
+
+.quick_subscribe_info{
+  /* width: 90%; */
+  /* margin:0 auto; */
+  /* display: grid; 
+  grid-template-columns: repeat(3,1fr); */
+  /* align-items: center; */
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+.info_section{
+
+}
+.info_section h3{
+  color: white;
+  font-weight: 600;
+
+}
+.info_txt{
+
+}
+.info_txt p{
+  color: white;
+  
+}
+.quick_section{}
+.quick_section h3{
+  color: white;
+  font-weight: 600;
+}
+.quick_txt{
+
+}
+.quick_txt p{
+  color: white;
+}
+.mail_section{
+  display: flex;
+}
+.mail_section input{
+  padding: 13px;
+  border-radius: 3px;
+  background-color: rgb(56, 58, 58);
+  outline: none;
+  border: none;
+}
+.submit{
+  color: white;
+  background-color: rgb(255, 84, 0);
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.subscribe_section{
+
+}
+.subscribe_section h3{
+  color: white;
+  font-weight: 600;
+}
+.mail_section p{
+  color: white;
+}
+.card_section{
+  padding: 50px;
+  background-color: rgb(25, 25, 26);
+  border-radius: 4px;
+}
+.subscribe_social{
+  /* color: white; */
+  display: flex;
+  margin-top: 10px;
+}
+
+.fa_i{
+  color: white;
+  background-color: rgb(59 ,89, 152);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.tw_i{
+  color: white;
+  background-color: rgb(85 ,172, 238);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.pr_i{
+  color: white;
+  background-color: rgb(215 ,30, 24);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 10px;
+
+}
+.lin_i{
+  color: white;
+  background-color: rgb(21 ,101, 192);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 10px;
+
+}
+
+/* responsive */
+@media only screen and (max-width: 768px){
+  .footer_container{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  .icon_details p{
+    font-size: 11px;
+  }
+  .icon_details h4{
+    font-size: 13px;
+    /* justify-content: center; */
+  }
+  .info_link_subscribe_section{
+    padding: 40px;
+  }
+  
+  .quick_subscribe_info{
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: column;
+  }
+  .info_section{
+    margin-bottom: 30px;
+  }
+  .info_section h3{
+    color: white;
+    font-weight: 600;
+  
+  }
+  .info_txt{
+  
+  }
+  .info_txt p{
+    color: white;
+    
+  }
+  .quick_section{
+    margin-bottom:40px ;
+  }
+
+  .card_section{
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 425px){
+  .footer_container{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  .icon_details p{
+    font-size: 11px;
+  }
+  .icon_details h4{
+    font-size: 13px;
+    /* justify-content: center; */
+  }
+  .info_link_subscribe_section{
+    padding: 40px;
+  }
+  
+  .quick_subscribe_info{
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: column;
+  }
+  .info_section{
+    margin-bottom: 30px;
+  }
+  .info_section h3{
+    color: white;
+    font-weight: 600;
+  
+  }
+  .info_txt{
+  
+  }
+  .info_txt p{
+    color: white;
+    
+  }
+  .quick_section{
+    margin-bottom:40px ;
+  }
+
+  .card_section{
+    padding: 20px;
+  }
+}

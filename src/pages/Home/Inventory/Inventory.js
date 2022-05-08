@@ -8,11 +8,14 @@ const Inventory = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product`)
+    fetch(`https://stormy-ocean-18097.herokuapp.com/product`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
-  // console.log(product);
+
+  if (product.length === 0) {
+    return <Loading></Loading>;
+  }
   return (
     <div className={styles.inventory_main}>
       <div className={styles.inventory_section}>
@@ -24,9 +27,6 @@ const Inventory = () => {
         <button className={styles.new_car_btn}>NEW CARS</button>
         <button className={styles.used_car_btn}>USED CARS</button>
       </div>
-    {
-      // !product && <Loading></Loading>
-    }
       <div className={styles.inventory_card}>
         {product.slice(0, 6).map((singleProduct) => (
           <InventoryItem

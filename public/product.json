@@ -6,9 +6,10 @@
     "build_year":2012,
     "supplier":"Great Wall",
     "mileage":7500,
-    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "description":"The 2020 BMW i8 is for enlightened thrill-seekers. Drivers who still want the whole experience to be entertaining and involving, yet understand the negative messages various performance cars emit and would like to keep all adverse emissions as low as possible. The BMW i8 is a plug-in hybrid, but not the usual kind with a line of slow-moving traffic stuck behind it.",
     "img":"https://i.ibb.co/n8pzhQm/s-released-cars-thumb03.jpg.jpg"
   },
+  
   {
     "name":"JAGUER M1 HYBRID",
     "price":2300,
@@ -16,7 +17,7 @@
     "build_year":2012,
     "supplier":"Great Wall",
     "mileage":7500,
-    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "description":"The figures provided are NEDC2 calculated from official manufacturer's​ WLTP tests in accordance with EU legislation with a fully charged​ battery. For comparison purposes only. Real world figures may differ. CO2,​ fuel economy, energy consumption and range figures may vary according​ to factors such as driving styles, environmental conditions, load, wheel​ fitment and accessories fitted. NEDC2 are figures calculated using a​ Government formula from WLTP figures equivalent to what they would have​ been under the old NEDC test. The correct tax treatment can then be​ applied.",
     "img":"https://i.ibb.co/TwWJGzc/s-released-cars-thumb01.jpg"
   },
   {
@@ -26,7 +27,7 @@
     "build_year":2012,
     "supplier":"Great Wall",
     "mileage":7500,
-    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "description":"Audi is offering the new A8 with three hybrid powertrain modes combined with eight-speed automatic transmission and quattro all-wheel drive. The 3.0-litre Tdi quattro tiptronic model with the V6 turbodiesel unit comes with a 48 Volt mild-hybrid technology",
     "img":"https://i.ibb.co/R2R9BxC/s-released-cars-thumb04.jpg"
   },
   {
@@ -36,7 +37,7 @@
     "build_year":2012,
     "supplier":"Great Wall",
     "mileage":7500,
-    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "description":"The Audi RS Q8 has 1 Petrol Engine on offer. The Petrol engine is 3998 cc . It is available with Automatic transmission.Depending upon the variant and fuel type the RS Q8 has a mileage of 8.26 kmpl . The RS Q8 is a 5 seater 8 cylinder car and has length of 5012mm, width of 2190mm and a wheelbase of 2998mm.",
     "img":"https://i.ibb.co/2v8vFC5/s-released-cars-thumb05.jpg.jpg"
   },
   {
@@ -46,7 +47,27 @@
     "build_year":2012,
     "supplier":"Great Wall",
     "mileage":7500,
-    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "description":"The Audi RS Q8 has 1 Petrol Engine on offer. The Petrol engine is 3998 cc . It is available with Automatic transmission.Depending upon the variant and fuel type the RS Q8 has a mileage of 8.26 kmpl . The RS Q8 is a 5 seater 8 cylinder car and has length of 5012mm, width of 2190mm and a wheelbase of 2998mm.",
+    "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
+  },
+  {
+    "name":"MERCEDEZ BENZ EI8",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"The 2020 BMW i8 is for enlightened thrill-seekers. Drivers who still want the whole experience to be entertaining and involving, yet understand the negative messages various performance cars emit and would like to keep all adverse emissions as low as possible. The BMW i8 is a plug-in hybrid, but not the usual kind with a line of slow-moving traffic stuck behind it.",
+    "img":"https://i.ibb.co/dPRt2bP/s-released-cars-thumb06.jpg"
+  },
+  {
+    "name":"AUDI NEW BOM 800",
+    "price":2300,
+    "stock":8,
+    "build_year":2012,
+    "supplier":"Great Wall",
+    "mileage":7500,
+    "description":"The 2020 BMW i8 is for enlightened thrill-seekers. Drivers who still want the whole experience to be entertaining and involving, yet understand the negative messages various performance cars emit and would like to keep all adverse emissions as low as possible. The BMW i8 is a plug-in hybrid, but not the usual kind with a line of slow-moving traffic stuck behind it.",
     "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
   },
   {
@@ -56,27 +77,7 @@
     "build_year":2012,
     "supplier":"Great Wall",
     "mileage":7500,
-    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
-    "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
-  },
-  {
-    "name":"AUDI NEW BOM 800",
-    "price":2300,
-    "stock":8,
-    "build_year":2012,
-    "supplier":"Great Wall",
-    "mileage":7500,
-    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
-    "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
-  },
-  {
-    "name":"AUDI NEW BOM 800",
-    "price":2300,
-    "stock":8,
-    "build_year":2012,
-    "supplier":"Great Wall",
-    "mileage":7500,
-    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "description":"The 2020 BMW i8 is for enlightened thrill-seekers. Drivers who still want the whole experience to be entertaining and involving, yet understand the negative messages various performance cars emit and would like to keep all adverse emissions as low as possible. The BMW i8 is a plug-in hybrid, but not the usual kind with a line of slow-moving traffic stuck behind it.",
     "img":"https://i.ibb.co/nnvZZrj/s-released-cars-thumb02.jpg.jpg"
   },
   {
@@ -86,7 +87,7 @@
     "build_year":2012,
     "supplier":"Great Wall",
     "mileage":7500,
-    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sint quaerat aliquid minus, assumenda doloribus facilis delectus debitis minima, iste tempore",
+    "description":"The figures provided are NEDC2 calculated from official manufacturer's​ WLTP tests in accordance with EU legislation with a fully charged​ battery. For comparison purposes only. Real world figures may differ. CO2,​ fuel economy, energy consumption and range figures may vary according​ to factors such as driving styles, environmental conditions, load, wheel​ fitment and accessories fitted. NEDC2 are figures calculated using a​ Government formula from WLTP",
     "img":"https://i.ibb.co/dPRt2bP/s-released-cars-thumb06.jpg.jpg"
   }
 ]

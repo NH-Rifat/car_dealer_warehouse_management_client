@@ -6,13 +6,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const InventoryDetails = () => {
   const { id } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   // console.log(id);
   const [item, setItem] = useState({});
   const [rendered, setRendered] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://stormy-ocean-18097.herokuapp.com/product/${id}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, [id, rendered]);
@@ -21,7 +21,7 @@ const InventoryDetails = () => {
     let quantity = parseInt(item.stock) - 1;
 
     if (quantity) {
-      fetch(`http://localhost:5000/product/${id}`, {
+      fetch(`https://stormy-ocean-18097.herokuapp.com/product/${id}`, {
         method: 'PUT',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ quantity }),
@@ -41,7 +41,7 @@ const InventoryDetails = () => {
     const quantityObj = { newStock };
 
     if (quantityObj) {
-      fetch(`http://localhost:5000/productStock/${id}`, {
+      fetch(`https://stormy-ocean-18097.herokuapp.com/productStock/${id}`, {
         method: 'PUT',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(quantityObj),

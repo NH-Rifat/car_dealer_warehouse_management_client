@@ -89,13 +89,14 @@ const Header = () => {
               )}
               <Nav.Link
                 as={Link}
-                to='/blog'
+                to='/blogs'
                 href='#deets'
                 style={{ color: 'black' }}
                 className={styles.nav_item}
               >
                 BLOG
               </Nav.Link>
+              
               {user ? (
                 <button className={styles.signOut_btn} onClick={handleSignOut}>
                   {user?.displayName || user?.email.split('@')[0]}
@@ -114,6 +115,7 @@ const Header = () => {
                   REGISTER
                 </Nav.Link>
               )}
+              
             </Nav>
           </Navbar.Collapse>
         </Navbar>

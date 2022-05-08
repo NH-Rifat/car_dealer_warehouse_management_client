@@ -18,8 +18,8 @@ const MyItems = () => {
   useEffect(() => {
     const getMyItems = async () => {
       const email = user?.email;
-      console.log('user email',email);
-      const url = `http://localhost:5000/myItems?email=${email}`;
+      console.log('user email', email);
+      const url = `https://stormy-ocean-18097.herokuapp.com/myItems?email=${email}`;
       try {
         const { data } = await axios.get(url, {
           headers: {
@@ -45,7 +45,7 @@ const MyItems = () => {
     // console.log('handleDeleteItem',id);
     const confirmation = window.confirm('Are you Sure to Delete?');
     if (confirmation) {
-      fetch(`http://localhost:5000/product/${id}`, {
+      fetch(`https://stormy-ocean-18097.herokuapp.com/product/${id}`, {
         method: 'DELETE',
       })
         .then((res) => res.json())

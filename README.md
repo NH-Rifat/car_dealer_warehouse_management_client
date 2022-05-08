@@ -3,9 +3,7 @@ This is a car dealing inventory web application where user can manage his/her ca
 
 ## Available links
 
-Project live link [https://javascript-book-review.netlify.app/home](https://javascript-book-review.netlify.app/home).
-
-Project Repo link [https://github.com/programming-hero-web-course-4/independent-service-provider-NH-Rifat](https://github.com/programming-hero-web-course-4/independent-service-provider-NH-Rifat).
+Project live link [https://car-dealer-407f1.web.app/](https://car-dealer-407f1.web.app/).
 
 ## Application Feature
 

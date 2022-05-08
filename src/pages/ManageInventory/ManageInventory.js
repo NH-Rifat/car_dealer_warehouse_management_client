@@ -45,11 +45,12 @@ const ManageInventory = () => {
   const handleAddNewCar = () => {
     // console.log('handleAddNewCar');
     // console.log(user);
-    if (user) {
-      navigate('/addItems');
-    } else {
-      navigate('/login');
-    }
+    // if (user) {
+    //   navigate('/addItems');
+    // } else {
+    //   navigate('/login');
+    // }
+    navigate(`/addItems`);
   };
 
   return (

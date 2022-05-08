@@ -6,11 +6,16 @@ import styles from './Login.module.css';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Loading/Loading';
+import axios from 'axios';
+import useToken from '../../hooks/useToken';
 
 const Login = () => {
   let errorElement = '';
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  const [token] = useToken(user);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -23,18 +28,20 @@ const Login = () => {
     return <Loading></Loading>;
   }
 
-  if (user) {
+  if (token) {
     navigate(from, { replace: true });
   }
 
   if (error) {
-    errorElement = <p className='text-danger'>Error: {error?.message}</p>;
+    errorElement = <p className='text-danger'>Error: {error.message}</p>;
   }
 
-  const handleSignWithEmailAndPassword = (event) => {
+  const handleSignWithEmailAndPassword = async (event) => {
     event.preventDefault();
 
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+
+    // navigate(from, { replace: true });
   };
   return (
     <div>

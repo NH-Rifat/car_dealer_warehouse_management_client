@@ -26,6 +26,7 @@ const InventoryItem = ({ item }) => {
   // },[])
 
   const handleManage = (itemId) => {
+    // console.log('inventoryDetails');
     navigate(`/inventoryDetails/${itemId}`);
   };
 

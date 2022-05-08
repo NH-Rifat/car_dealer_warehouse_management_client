@@ -63,7 +63,11 @@ const AddItem = () => {
               </div>
               <div className={styles.inputBx}>
                 <span>Quantity</span>
-                <input type='text' name='stock' placeholder='stock' />
+                <input
+                  type='text'
+                  name='stock'
+                  placeholder='stock or quantity'
+                />
               </div>
               <div className={styles.inputBx}>
                 <span>Description</span>
@@ -71,6 +75,7 @@ const AddItem = () => {
                   name='description'
                   cols='40'
                   rows='3'
+                  placeholder='Please write something About Car'
                   className={styles.text_area}
                 ></textarea>
               </div>

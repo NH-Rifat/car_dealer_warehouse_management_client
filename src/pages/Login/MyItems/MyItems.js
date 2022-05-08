@@ -1,22 +1,43 @@
 import { render } from '@testing-library/react';
+import axios from 'axios';
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SingleInventoryItem from '../../ManageInventory/SingleInventoryItem/SingleInventoryItem';
 import styles from './MyItems.module.css';
 
 const MyItems = () => {
   const [products, setProducts] = useState([]);
-  const [rendered,setRendered] = useState(false)
-  const [user] = useAuthState(auth)
-  console.log(user?.email);
+  const [rendered, setRendered] = useState(false);
+  const navigate = useNavigate();
+  const [user] = useAuthState(auth);
+  // console.log(user?.email);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myItems?email=${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, [user?.email,rendered]);
+    const getMyItems = async () => {
+      const email = user?.email;
+      console.log('user email',email);
+      const url = `http://localhost:5000/myItems?email=${email}`;
+      try {
+        const { data } = await axios.get(url, {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+          },
+        });
+        // console.log(data);
+        setProducts(data);
+      } catch (error) {
+        // console.log(error.message);
+        if (error.response.status === 401 || error.response.status === 403) {
+          signOut(auth);
+          navigate('/login');
+        }
+      }
+    };
+    getMyItems();
+  }, [user?.email, rendered]);
 
   // console.log(user)
 
@@ -32,7 +53,7 @@ const MyItems = () => {
           if (data.deletedCount > 0) {
             const remainingProduct = products.filter((item) => item._id !== id);
             setProducts(remainingProduct);
-            setRendered(!rendered)
+            setRendered(!rendered);
           }
         });
     }
@@ -46,8 +67,7 @@ const MyItems = () => {
             Total Cars Find:<span> {products.length}</span>
           </h2>
           <Link to='/addItems'>
-          <button className={styles.add_car_btn}>Add new car</button>
-          
+            <button className={styles.add_car_btn}>Add new car</button>
           </Link>
         </div>
         {products.map((item) => (

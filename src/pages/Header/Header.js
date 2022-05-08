@@ -11,6 +11,7 @@ import { signOut } from 'firebase/auth';
 
 const Header = () => {
   const [user] = useAuthState(auth);
+  console.log(user)
 
   const handleSignOut = () => {
     signOut(auth);
@@ -97,7 +98,7 @@ const Header = () => {
               </Nav.Link>
               {user ? (
                 <button className={styles.signOut_btn} onClick={handleSignOut}>
-                  {user?.displayName || user?.email.slice(0, 5)}
+                  {user?.displayName || user?.email.split('@')[0]}
                   <span className={styles.signOutIcon}>
                     <FaSignOutAlt></FaSignOutAlt>
                   </span>

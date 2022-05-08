@@ -6,6 +6,7 @@ import styles from './Register.module.css';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Loading/Loading';
+import useToken from '../../hooks/useToken';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -15,15 +16,21 @@ const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
+    const [token] = useToken(user)
+
   if (loading) {
     return <Loading></Loading>;
+  }
+
+  if(token){
+    navigate('/home')
   }
 
   const handleSubmitWithNameEmailAndPassword = (event) => {
     event.preventDefault();
     // console.log(name,email,password);
     createUserWithEmailAndPassword(email, password);
-    event.target.value.reset();
+    // event.target.value.reset();
   };
   return (
     <div className={styles.login_container}>
@@ -72,7 +79,7 @@ const Register = () => {
                 </label>
               </div>
               <div className={styles.inputBx}>
-                <input type='submit' value='Sign up' disabled /> 
+                <input type='submit' value='Sign up' /> 
               </div>
               <div className={styles.inputBx}>
                 <p>

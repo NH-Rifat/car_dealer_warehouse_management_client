@@ -8,11 +8,17 @@ import auth from '../../../firebase.init';
 import Loading from '../../Loading/Loading';
 import axios from 'axios';
 import useToken from '../../hooks/useToken';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   let errorElement = '';
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   const [token] = useToken(user);
 
@@ -38,10 +44,17 @@ const Login = () => {
 
   const handleSignWithEmailAndPassword = async (event) => {
     event.preventDefault();
-
     await signInWithEmailAndPassword(email, password);
-
     // navigate(from, { replace: true });
+  };
+  const resetPassword = async () => {
+    // console.log('password reset email', email);
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast('Sent email');
+    } else if(!email) {
+      toast('please Enter your email');
+    }
   };
   return (
     <div>
@@ -87,7 +100,9 @@ const Login = () => {
                 <div className={styles.inputBx}>
                   <p>
                     Forget Password?
-                    <button className={styles.reset}>Reset Password</button>
+                    <button className={styles.reset} onClick={resetPassword}>
+                      Reset Password
+                    </button>
                   </p>
                 </div>
               </form>
@@ -97,6 +112,7 @@ const Login = () => {
                 <div className={styles.right}></div>
               </div>
               <SocialLogin></SocialLogin>
+              <ToastContainer></ToastContainer>
             </div>
           </div>
         </section>

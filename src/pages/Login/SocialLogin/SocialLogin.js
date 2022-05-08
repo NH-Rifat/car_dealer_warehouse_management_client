@@ -31,14 +31,7 @@ const SocialLogin = () => {
   }
 
   if (error || errorOfGithub) {
-    errorElement = (
-      <div>
-        <p>
-          Error: {error?.message}
-          {errorOfGithub?.message}
-        </p>
-      </div>
-    );
+    errorElement = <p className='text-danger'>Error: {error.message}</p>;
   }
   if (token) {
     navigate(from, { replace: true });

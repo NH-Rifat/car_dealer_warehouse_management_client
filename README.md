@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Car Dealing web Application
+This is a car dealing inventory web application where user can manage his/her car product which is more interesting as well as give a facilities to make own product storage by providing his/her necessary product details information. In the primary mode before going to the login or Registration user discover all car products in the Home page but to see the products details or perform any operation in any product user have to be authorized. After login/signup user can discover something new which more realistic and helpful for the particular authorized user.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Available links
 
-## Available Scripts
+Project live link [https://javascript-book-review.netlify.app/home](https://javascript-book-review.netlify.app/home).
 
-In the project directory, you can run:
+Project Repo link [https://github.com/programming-hero-web-course-4/independent-service-provider-NH-Rifat](https://github.com/programming-hero-web-course-4/independent-service-provider-NH-Rifat).
 
-### `npm start`
+## Application Feature
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Home page
+* Manage Inventory page to manage product
+* Email-password login/signup
+* Social login
+* Manage product stock
+* Add new Product
+* Some private Route for authorized users only
+* Generate user access token using jwt
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Application Working Phases or Functionalities
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* User can route to the multiple Route
+* User can able to route different route with the help of navigation
+* User can able to see All car product using Inventory Route
+* User can login and sign up using email and password
+* User can get a email verification and reset password option
+* User can login with the help for social link like google,facebook as well as github
+* User can manage his/her product
+* User can perform needed operation on his/her product like (create, Read, delete, update) after login
+* There is some private Route which can be visible only for the authorized users
+* User can able see some question as well as answer in the Blog tab
+* User can see 404 that means page not found on the basis of given incorrect Route
 
-### `npm run build`
+## Technology used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* HTML
+* Pure CSS
+* React Bootstrap
+* Firebase React Hooks
+* Firebase Authentication
+* React Router Dom
+* React Icons
+* React Toastify
+* Node js
+* Express js
+* Mongodb
+* JWT(json web token)

@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Inventory.module.css';
-import { GiAutoRepair } from 'react-icons/gi';
-import { ImRoad } from 'react-icons/im';
-
 import { Link } from 'react-router-dom';
 import InventoryItem from '../../InventoryItem/InventoryItem';
+import Loading from '../../Loading/Loading';
 
 const Inventory = () => {
   const [product, setProduct] = useState([]);
@@ -26,7 +24,9 @@ const Inventory = () => {
         <button className={styles.new_car_btn}>NEW CARS</button>
         <button className={styles.used_car_btn}>USED CARS</button>
       </div>
-
+    {
+      // !product && <Loading></Loading>
+    }
       <div className={styles.inventory_card}>
         {product.slice(0, 6).map((singleProduct) => (
           <InventoryItem

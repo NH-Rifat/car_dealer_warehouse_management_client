@@ -3,6 +3,7 @@ import styles from './InventoryDetails.module.css';
 import { GoLocation } from 'react-icons/go';
 
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const InventoryDetails = () => {
   const { id } = useParams();
@@ -12,6 +13,7 @@ const InventoryDetails = () => {
   const [rendered, setRendered] = useState(false);
 
   const [stock, setStock] = useState(0);
+  const [restock, setRestock] = useState(0);
   // const [updateStock,setUpdateStock] = useState(0)
 
   useEffect(() => {
@@ -41,22 +43,26 @@ const InventoryDetails = () => {
 
   const handleStockUpdate = (event) => {
     event.preventDefault();
+    const getStockFromInput = parseInt(event.target.stockQuantity.value);
 
-    const newStock =
-      parseInt(event.target.stockQuantity.value) + parseInt(stock);
-    setStock(newStock);
+    if (getStockFromInput) {
+      const newStock = getStockFromInput + parseInt(stock);
+      setStock(newStock);
 
-    const quantityObj = { newStock };
+      const quantityObj = { newStock };
 
-    if (quantityObj) {
-      fetch(`https://evening-dawn-57536.herokuapp.com/productStock/${id}`, {
-        method: 'PUT',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(quantityObj),
-      }).then((res) => res.json());
-      // .then((data) => console.log(data));
-      setRendered(!rendered);
-      event.target.reset();
+      if (quantityObj) {
+        fetch(`https://evening-dawn-57536.herokuapp.com/productStock/${id}`, {
+          method: 'PUT',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(quantityObj),
+        }).then((res) => res.json());
+        // .then((data) => console.log(data));
+        setRendered(!rendered);
+        event.target.reset();
+      }
+    }else{
+      toast.warning("please add value to the input box")
     }
   };
 
@@ -134,7 +140,14 @@ const InventoryDetails = () => {
                   name='stockQuantity'
                   placeholder='Give me a quantity...'
                 />
-                <input type='submit' id='input-btn' name='' value='Re-stock' />
+                {
+                  <input
+                    type='submit'
+                    id='input-btn'
+                    name=''
+                    value='Re-stock'
+                  />
+                }
               </form>
             </div>
           </div>

@@ -3,10 +3,12 @@ import styles from './SocialLogin.module.css';
 import google from '../../../images/google.png';
 import github from '../../../images/github.png';
 import facebook from '../../../images/facebook.png';
+
 import {
   useSignInWithGithub,
   useSignInWithGoogle,
 } from 'react-firebase-hooks/auth';
+
 import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../Loading/Loading';
@@ -15,10 +17,10 @@ import useToken from '../../hooks/useToken';
 const SocialLogin = () => {
   // const [signInWithGoogle, user, loading, error] = useSignInWithGoogl(auth);
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  const [signInWithGithub, userOfGithub, loadingOfGithub, errorOfGithub] =
-    useSignInWithGithub(auth);
+  // const [signInWithGithub, userOfGithub, loadingOfGithub, errorOfGithub] =
+  //   useSignInWithGithub(auth);
 
-  const [token] = useToken(user || userOfGithub);
+  const [token] = useToken(user );
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -26,11 +28,11 @@ const SocialLogin = () => {
   let from = location.state?.from?.pathname || '/';
   let errorElement = '';
 
-  if (loading || loadingOfGithub) {
+  if (loading ) {
     return <Loading></Loading>;
   }
 
-  if (error || errorOfGithub) {
+  if (error ) {
     errorElement = <p className='text-danger'>Error: {error.message}</p>;
   }
   if (token) {
@@ -50,7 +52,7 @@ const SocialLogin = () => {
               </button>
             </div>
             <div className={`${styles.github} ${styles.social}`}>
-              <button onClick={() => signInWithGithub()}>
+              <button >
                 <img src={github} alt='' />
                 <span>Github Sign in</span>
               </button>

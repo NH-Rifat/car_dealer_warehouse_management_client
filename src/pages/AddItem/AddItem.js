@@ -3,6 +3,7 @@ import styles from './AddItem.module.css';
 import banner1 from '../../images/banner5.jpg';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const AddItem = () => {
   const [user] = useAuthState(auth);
@@ -21,7 +22,7 @@ const AddItem = () => {
       email: user.email,
     };
     // console.log(product);
-    if (product) {
+    if (product.name) {
       fetch(`https://evening-dawn-57536.herokuapp.com/product`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
@@ -29,6 +30,7 @@ const AddItem = () => {
       })
         .then((res) => res.json())
         .then((data) => console.log(data));
+        toast.success('product added in your items')
     }
   };
   return (
@@ -47,6 +49,15 @@ const AddItem = () => {
                   type='text'
                   name='name'
                   placeholder='Type your car Brand'
+                />
+              </div>
+              <div className={styles.inputBx}>
+                <span>Email</span>
+                <input
+                  type='text'
+                  value={user?.email}
+                  placeholder='your email'
+                  disabled
                 />
               </div>
               <div className={styles.inputBx}>

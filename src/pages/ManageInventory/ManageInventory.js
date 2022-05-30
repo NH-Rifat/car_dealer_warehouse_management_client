@@ -14,7 +14,7 @@ const ManageInventory = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch(`https://stormy-ocean-18097.herokuapp.com/product`)
+    fetch(`https://evening-dawn-57536.herokuapp.com/product`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -24,7 +24,7 @@ const ManageInventory = () => {
     if (user) {
       const confirmation = window.confirm('Are you Sure to Delete?');
       if (confirmation) {
-        fetch(`https://stormy-ocean-18097.herokuapp.com/product/${id}`, {
+        fetch(`https://evening-dawn-57536.herokuapp.com/product/${id}`, {
           method: 'DELETE',
         })
           .then((res) => res.json())

@@ -8,7 +8,7 @@ const Inventory = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch(`https://stormy-ocean-18097.herokuapp.com/product`)
+    fetch(`https://evening-dawn-57536.herokuapp.com/product`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);

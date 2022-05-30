@@ -19,7 +19,7 @@ const MyItems = () => {
     const getMyItems = async () => {
       const email = user?.email;
       console.log('user email', email);
-      const url = `https://stormy-ocean-18097.herokuapp.com/myItems?email=${email}`;
+      const url = `https://evening-dawn-57536.herokuapp.com/myItems?email=${email}`;
       try {
         const { data } = await axios.get(url, {
           headers: {
@@ -45,7 +45,7 @@ const MyItems = () => {
     // console.log('handleDeleteItem',id);
     const confirmation = window.confirm('Are you Sure to Delete?');
     if (confirmation) {
-      fetch(`https://stormy-ocean-18097.herokuapp.com/product/${id}`, {
+      fetch(`https://evening-dawn-57536.herokuapp.com/product/${id}`, {
         method: 'DELETE',
       })
         .then((res) => res.json())

@@ -22,7 +22,7 @@ const AddItem = () => {
     };
     // console.log(product);
     if (product) {
-      fetch(`http://localhost:5000/product`, {
+      fetch(`https://evening-dawn-57536.herokuapp.com/product`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(product),

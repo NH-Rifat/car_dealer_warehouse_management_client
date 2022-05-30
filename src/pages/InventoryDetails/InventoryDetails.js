@@ -15,7 +15,7 @@ const InventoryDetails = () => {
   // const [updateStock,setUpdateStock] = useState(0)
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://evening-dawn-57536.herokuapp.com/product/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
@@ -29,7 +29,7 @@ const InventoryDetails = () => {
     setStock(quantity);
 
     if (quantity) {
-      fetch(`http://localhost:5000/product/${id}`, {
+      fetch(`https://evening-dawn-57536.herokuapp.com/product/${id}`, {
         method: 'PUT',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ quantity }),
@@ -49,7 +49,7 @@ const InventoryDetails = () => {
     const quantityObj = { newStock };
 
     if (quantityObj) {
-      fetch(`http://localhost:5000/productStock/${id}`, {
+      fetch(`https://evening-dawn-57536.herokuapp.com/productStock/${id}`, {
         method: 'PUT',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(quantityObj),

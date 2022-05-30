@@ -11,24 +11,31 @@ const InventoryDetails = () => {
   const [item, setItem] = useState({});
   const [rendered, setRendered] = useState(false);
 
+  const [stock, setStock] = useState(0);
+  // const [updateStock,setUpdateStock] = useState(0)
+
   useEffect(() => {
-    fetch(`https://stormy-ocean-18097.herokuapp.com/product/${id}`)
+    fetch(`http://localhost:5000/product/${id}`)
       .then((res) => res.json())
-      .then((data) => setItem(data));
-  }, [id, rendered]);
+      .then((data) => {
+        setItem(data);
+        setStock(data.stock);
+      });
+  }, [id]);
+  // console.log(stock);
 
   const handleDelivered = () => {
-    let quantity = parseInt(item.stock) - 1;
+    let quantity = parseInt(stock) - 1;
+    setStock(quantity);
 
     if (quantity) {
-      fetch(`https://stormy-ocean-18097.herokuapp.com/product/${id}`, {
+      fetch(`http://localhost:5000/product/${id}`, {
         method: 'PUT',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ quantity }),
-      })
-        .then((res) => res.json())
-        .then((data) => console.log(data));
-      setRendered(!rendered);
+      }).then((res) => res.json());
+      // .then((data) => console.log(data));
+      // setRendered(!rendered);
     }
   };
 
@@ -36,18 +43,18 @@ const InventoryDetails = () => {
     event.preventDefault();
 
     const newStock =
-      parseInt(event.target.stockQuantity.value) + parseInt(item.stock);
+      parseInt(event.target.stockQuantity.value) + parseInt(stock);
+    setStock(newStock);
 
     const quantityObj = { newStock };
 
     if (quantityObj) {
-      fetch(`https://stormy-ocean-18097.herokuapp.com/productStock/${id}`, {
+      fetch(`http://localhost:5000/productStock/${id}`, {
         method: 'PUT',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(quantityObj),
-      })
-        .then((res) => res.json())
-        .then((data) => console.log(data));
+      }).then((res) => res.json());
+      // .then((data) => console.log(data));
       setRendered(!rendered);
       event.target.reset();
     }
@@ -98,11 +105,17 @@ const InventoryDetails = () => {
             <div className={styles.other_info}>
               <div className={styles.stock}>
                 <p>
-                  In stock: <span>{item.stock}</span>
+                  In stock: <span>{stock}</span>
                 </p>
               </div>
               <div className={styles.Delivered}>
-                <button onClick={handleDelivered}>Delivered</button>
+                {stock > 0 ? (
+                  <button onClick={handleDelivered}>Delivered</button>
+                ) : (
+                  <button className={styles.out_of_stock} disabled>
+                    out of stock
+                  </button>
+                )}
               </div>
             </div>
           </div>
